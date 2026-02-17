@@ -123,6 +123,3 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
     </td>
   </tr>
 </table>
---
-💻 Acesse aqui:
-
