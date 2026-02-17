@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yan Kenny • Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ícone da página -->
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+</head>
+
+<body class="antialiased font-['Inter']">
+
+    <!-- menu de navegação fixo -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-red-deep/30">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="#inicio" class="text-2xl font-bold tracking-tight text-white font-['Space_Grotesk']"><span
+                    class="text-red-deep">Y</span>K</a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="nav-link group relative px-1 py-2">
+                    INÍCIO
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#sobre" class="nav-link group relative px-1 py-2">
+                    SOBRE
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#projetos" class="nav-link group relative px-1 py-2">
+                    PROJETOS
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#certificacoes" class="nav-link group relative px-1 py-2">
+                    CERTIFICAÇÕES
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contato" class="nav-link group relative px-1 py-2">
+                    CONTATO
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <!-- botão menu mobile -->
+            <button id="menuToggle" class="md:hidden text-white focus:outline-none text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- menu mobile -->
+        <div id="mobileMenu"
+            class="mobile-menu hidden md:hidden flex-col space-y-3 px-6 pb-5 pt-2 text-base border-t border-red-deep/20 font-['Inter']">
+            <a href="#inicio" class="block py-1 hover:text-red-deep transition-colors">INÍCIO</a>
+            <a href="#sobre" class="block py-1 hover:text-red-deep transition-colors">SOBRE</a>
+            <a href="#projetos" class="block py-1 hover:text-red-deep transition-colors">PROJETOS</a>
+            <a href="#certificacoes" class="block py-1 hover:text-red-deep transition-colors">CERTIFICAÇÕES</a>
+            <a href="#contato" class="block py-1 hover:text-red-deep transition-colors">CONTATO</a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- INÍCIO -->
+        <section id="inicio" class="min-h-screen flex items-center justify-center bg-black px-4">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <img src="img/profile.png" alt="Yan Kenny" class="foto-redonda w-40 h-40 shadow-2xl">
+                </div>
+                <p class="text-3xl md:text-4xl font-light text-gray-300 font-['Space_Grotesk']">Bem vindo(a)!</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold mt-2 text-white font-['Space_Grotesk']">Eu sou <span
+                        class="text-red-deep">Yan</span></h1>
+                <p class="text-xl md:text-2xl text-gray-400 mt-4 tracking-widest uppercase font-['Inter']">Desenvolvedor
+                    de Software
+                </p>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="py-20 px-6 bg-[#0e0e0e]">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-10 border-l-8 border-red-deep pl-4 font-['Space_Grotesk']">Sobre mim
+                </h2>
+                <div class="card p-8 text-lg leading-relaxed text-gray-300">
+                    <p class="mb-6">
+                        Minha paixão por tecnologia nasceu da curiosidade em transformar ideias em realidade através de
+                        linhas de código.
+                        Como desenvolvedor, encontro beleza na harmonia
+                        entre frontend expressivo e backend robusto.
+                        Adoro criar <strong class="text-white">soluções práticas</strong> que resolvem problemas reais,
+                        sempre priorizando <strong class="text-white">design responsivo</strong>
+                        e interfaces intuitivas que encantam o usuário. Cada projeto é uma oportunidade de unir lógica e
+                        criatividade.
+                    </p>
+                    <a href="doc/curriculo_yankenny.pdf" id="baixarCurriculo"
+                        class="inline-flex items-center gap-2 bg-red-deep hover:bg-[#991b1b] text-white font-medium py-3 px-6 rounded-full transition shadow-lg">
+                        <i class="fas fa-download"></i> Baixar Currículo (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="py-20 px-6 bg-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-10 border-l-8 border-red-deep pl-4 font-['Space_Grotesk']">Meus
+                    Projetos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projeto 1 - Grano D´oro -->
+                    <div class="card p-0 flex flex-col overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-amber-900 to-amber-700">
+                            <img src="img/granodoro.png" alt="Grano D´oro Preview"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3">
+                                <span class="px-2 py-1 bg-red-deep/90 text-white text-xs rounded-full">Landing
+                                    Page</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Grano D´oro</h3>
+                            <p class="text-gray-400 mt-2 flex-1 text-sm">Landing Page de uma cafeteria desenvolvida em
+                                HTML, CSS e JavaScript treinando o conceito de Landing Pages</p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="text-xs text-gray-500"><i class="fab fa-github"></i> Repositório</span>
+                                <a href="https://github.com/kennyangit/landingPage" target="_blank"
+                                    class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 - Neo Store -->
+                    <div class="card p-0 flex flex-col overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-purple-900">
+                            <img src="img/neostore.png" alt="Neo Store Preview"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3">
+                                <span class="px-2 py-1 bg-red-deep/90 text-white text-xs rounded-full">E-commerce</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Neo Store</h3>
+                            <p class="text-gray-400 mt-2 flex-1 text-sm">Exemplo de site de E-commerce construído com
+                                HTML, CSS e JavaScript, esse projeto foi feito para a disciplina de Desenvolvimento de
+                                Aplicações para Internet.</p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="text-xs text-gray-500"><i class="fab fa-github"></i> Repositório</span>
+                                <a href="https://github.com/kennyangit/neo_store" target="_blank" class="btn-github"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 - Pokedex -->
+                    <div class="card p-0 flex flex-col overflow-hidden group">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-red-900 to-yellow-900">
+                            <img src="img/pokedex.png" alt="Pokedex Preview"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3">
+                                <span class="px-2 py-1 bg-red-deep/90 text-white text-xs rounded-full">Pokedex</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Pokedex</h3>
+                            <p class="text-gray-400 mt-2 flex-1 text-sm">Uma Pokédex interativa desenvolvida com HTML,
+                                Tailwind CSS e JavaScript, utilizando a PokéAPI para buscar informações dos Pokémons.
+                            </p>
+                            <div class="mt-5 flex justify-between items-center">
+                                <span class="text-xs text-gray-500"><i class="fab fa-github"></i> Repositório</span>
+                                <a href="https://github.com/kennyangit/Pokedex" target="_blank" class="btn-github"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 - Sistema de Ordens de Serviço -->
+                    <div class="card p-6 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-red-deep/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-code-branch text-red-deep text-sm"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-red-deep/90 text-white text-xs rounded-full">Java Swing</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Sistema de Gerenciamento de
+                            Ordens de Serviço</h3>
+                        <p class="text-gray-400 mt-2 flex-1 text-sm">Este é um sistema desktop desenvolvido em Java
+                            utilizando elementos Swing para gerenciamento completo de clientes e ordens de serviço (OS).
+                        </p>
+                        <div class="mt-5 flex justify-between items-center">
+                            <span class="text-xs text-gray-500"><i class="fab fa-github"></i> Repositório</span>
+                            <a href="https://github.com/kennyangit/GeneratorOS" target="_blank" class="btn-github"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 - Sistema de Produtos -->
+                    <div class="card p-6 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-red-deep/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-database text-red-deep text-sm"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-red-deep/90 text-white text-xs rounded-full">CRUD</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Sistema de Produtos</h3>
+                        <p class="text-gray-400 mt-2 flex-1 text-sm">Um sistema desktop desenvolvido em Java (Swing)
+                            para gerenciamento de Categorias e Produtos. Ele permite cadastrar categorias, cadastrar
+                            produtos, alterar produtos existentes e consultar produtos filtrando por categoria.</p>
+                        <div class="mt-5 flex justify-between items-center">
+                            <span class="text-xs text-gray-500"><i class="fab fa-github"></i> Repositório</span>
+                            <a href="https://github.com/kennyangit/sistema-produtos" target="_blank"
+                                class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 - Calculadora de Comissões -->
+                    <div class="card p-6 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-red-deep/20 rounded-full flex items-center justify-center">
+                                <i class="fab fa-python text-red-deep text-sm"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-red-deep/90 text-white text-xs rounded-full">Python</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Calculadora de Comissões</h3>
+                        <p class="text-gray-400 mt-2 flex-1 text-sm">Um sistema desktop desenvolvido em Python para
+                            gerenciamento de comissões e despesas. Esse software foi feito para diminuição de esforço em
+                            momentos que é necessário utilizar muito a calculadora, tudo vem automatizado.</p>
+                        <div class="mt-5 flex justify-between items-center">
+                            <span class="text-xs text-gray-500"><i class="fab fa-github"></i> Repositório</span>
+                            <a href="https://github.com/kennyangit/PROJECT355" target="_blank" class="btn-github"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCAÇÃO E CERTIFICAÇÕES -->
+        <section id="certificacoes" class="py-20 px-6 bg-[#0e0e0e]">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-16 border-l-8 border-red-deep pl-4 font-['Space_Grotesk']">Formação &
+                    Certificados</h2>
+
+                <!-- Seção Educação -->
+                <div class="mb-16">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 bg-red-deep rounded-full flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-semibold text-white font-['Space_Grotesk']">Educação</h3>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-1">
+                        <div class="card p-8 hover:scale-[1.02] transition-transform duration-300">
+                            <span class="date-badge mb-4 text-sm"><i class="far fa-calendar-alt mr-2"></i>2025 -
+                                presente</span>
+                            <h3 class="text-3xl font-bold text-white mb-3 font-['Space_Grotesk']">Graduação em Análise e
+                                Desenvolvimento de
+                                Sistemas</h3>
+                            <p class="text-gray-300 text-base leading-relaxed">
+                                Atualmente estou desenvolvendo sólidas competências em programação back-end e front-end,
+                                modelagem e gestão de bancos de dados, e engenharia de software.
+                                Também estou me aprofundando em metodologias ágeis como Scrum.
+                                Meu foco está na resolução prática de problemas e na criação de sistemas eficientes que
+                                atendam às necessidades do mercado.
+                            </p>
+                            <div class="mt-4 flex gap-2">
+                                <span
+                                    class="px-3 py-1 bg-red-deep/20 text-red-deep rounded-full text-sm">Tecnólogo</span>
+                                <span class="px-3 py-1 bg-red-deep/20 text-red-deep rounded-full text-sm">Em
+                                    andamento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção Certificados -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 bg-red-deep rounded-full flex items-center justify-center">
+                            <i class="fas fa-certificate text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-semibold text-white font-['Space_Grotesk']">Certificações</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                        <div class="card p-6">
+                            <span class="date-badge mb-3"><i class="far fa-calendar-alt mr-1"></i>2025</span>
+                            <h3 class="text-2xl font-semibold text-white mt-1 font-['Space_Grotesk']">Java Development
+                            </h3>
+                            <p class="text-gray-400 text-sm mt-2">• Aprendi conceitos de classes, objetos, herança,
+                                polimorfismo, encapsulamento e interfaces.<br>
+                                • Aplicação prática em projetos Java reais.</p>
+                            <div class="mt-3">
+                                <span
+                                    class="inline-block px-2 py-1 bg-red-deep/10 text-red-deep text-xs rounded">FIAP</span>
+                            </div>
+                        </div>
+
+                        <div class="card p-6">
+                            <span class="date-badge mb-3"><i class="far fa-calendar-alt mr-1"></i>2025</span>
+                            <h3 class="text-2xl font-semibold text-white mt-1 font-['Space_Grotesk']">Scrum Fundamentals
+                                Certified</h3>
+                            <p class="text-gray-400 text-sm mt-2">
+                                • Entendimento dos papéis de Scrum Master, Product Owner e Time de Desenvolvimento.<br>
+                                • Estudo dos principais artefatos: Product Backlog, Sprint Backlog e Increment.<br>
+                                • Entendi como aplicar o Scrum em diferentes contextos organizacionais.<br>
+                                • Entendi como desenvolver boas práticas de colaboração, priorização e entrega contínua.
+                            </p>
+                            <div class="mt-3">
+                                <span class="inline-block px-2 py-1 bg-red-deep/10 text-red-deep text-xs rounded">VMEdu
+                                    Inc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="py-20 px-6 bg-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-10 border-l-8 border-red-deep pl-4 font-['Space_Grotesk']">Contato</h2>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- formulário -->
+                    <div class="card p-8">
+                        <form id="formContato" class="space-y-6">
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2 font-medium">Nome</label>
+                                <input type="text" placeholder="Seu nome" required
+                                    class="w-full bg-[#1f1f1f] border border-gray-700 rounded-xl px-5 py-4 text-white placeholder-gray-500 transition duration-200 
+                            focus:outline-none focus:border-red-deep focus:ring-2 focus:ring-red-deep focus:ring-offset-0">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2 font-medium">E-mail</label>
+                                <input type="email" placeholder="voce@email.com" required
+                                    class="w-full bg-[#1f1f1f] border border-gray-700 rounded-xl px-5 py-4 text-white placeholder-gray-500 transition duration-200 
+                            focus:outline-none focus:border-red-deep focus:ring-2 focus:ring-red-deep focus:ring-offset-0">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2 font-medium">Assunto</label>
+                                <input type="text" placeholder="Assunto da mensagem" required
+                                    class="w-full bg-[#1f1f1f] border border-gray-700 rounded-xl px-5 py-4 text-white placeholder-gray-500 transition duration-200 
+                            focus:outline-none focus:border-red-deep focus:ring-2 focus:ring-red-deep focus:ring-offset-0">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2 font-medium">Mensagem</label>
+                                <textarea rows="4" placeholder="Escreva sua mensagem..." required
+                                    class="w-full bg-[#1f1f1f] border border-gray-700 rounded-xl px-5 py-4 text-white placeholder-gray-500 transition duration-200 
+                            focus:outline-none focus:border-red-deep focus:ring-2 focus:ring-red-deep focus:ring-offset-0 resize-none min-h-[150px]"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button type="submit"
+                                    class="bg-red-deep hover:bg-[#991b1b] text-white font-semibold py-3 px-8 rounded-full text-lg transition shadow-lg 
+                            focus:outline-none focus:ring-2 focus:ring-red-deep focus:ring-offset-2 focus:ring-offset-black">
+                                    <i class="fas fa-paper-plane mr-2"></i>Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Redes Sociais -->
+                    <div class="flex flex-col justify-center space-y-8">
+                        <p class="text-2xl text-gray-300 font-['Space_Grotesk']">Ou me encontre nas redes:</p>
+                        <div class="flex flex-wrap gap-6 text-3xl">
+                            <a href="https://www.linkedin.com/in/yan-kenny/" target="_blank"
+                                class="social-icon focus:outline-none focus:ring-2 focus:ring-red-deep focus:ring-offset-2 focus:ring-offset-black">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/kennyangit" target="_blank"
+                                class="social-icon focus:outline-none focus:ring-2 focus:ring-red-deep focus:ring-offset-2 focus:ring-offset-black">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/kennyan_z" target="_blank"
+                                class="social-icon focus:outline-none focus:ring-2 focus:ring-red-deep focus:ring-offset-2 focus:ring-offset-black">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:yankennydsn@gmail.com"
+                                class="social-icon focus:outline-none focus:ring-2 focus:ring-red-deep focus:ring-offset-2 focus:ring-offset-black">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <div class="text-gray-400 text-lg space-y-2 mt-4">
+                            <p><i class="fas fa-envelope text-red-deep mr-3"></i>yankennydsn@gmail.com</p>
+                            <p><i class="fab fa-github text-red-deep mr-3"></i>kennyangit</p>
+                            <p><i class="fab fa-linkedin text-red-deep mr-3"></i>Yan Kenny</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="border-t border-red-deep/20 py-6 text-center text-sm text-gray-500 bg-black">
+            Yan Kenny © 2026 • Desenvolvedor de Software
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
