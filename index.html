@@ -31,51 +31,88 @@
     <!-- menu de navegação fixo -->
     <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-red-deep/30">
         <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-            <a href="#inicio" class="text-2xl font-bold tracking-tight text-white font-['Space_Grotesk']"><span
-                    class="text-red-deep">Y</span>K</a>
+            <a href="#inicio" class="block">
+                <img src="img/logo.ico" alt="Yan Kenny Logo" class="h-12 w-auto">
+            </a>
 
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#inicio" class="nav-link group relative px-1 py-2">
-                    INÍCIO
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#sobre" class="nav-link group relative px-1 py-2">
-                    SOBRE
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#projetos" class="nav-link group relative px-1 py-2">
-                    PROJETOS
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#certificacoes" class="nav-link group relative px-1 py-2">
-                    CERTIFICAÇÕES
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#contato" class="nav-link group relative px-1 py-2">
-                    CONTATO
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
-                </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex space-x-8 text-sm font-medium">
+                    <a href="#inicio" class="nav-link group relative px-1 py-2">
+                        <span class="lang-pt">INÍCIO</span>
+                        <span class="lang-en hidden">HOME</span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#sobre" class="nav-link group relative px-1 py-2">
+                        <span class="lang-pt">SOBRE</span>
+                        <span class="lang-en hidden">ABOUT</span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#projetos" class="nav-link group relative px-1 py-2">
+                        <span class="lang-pt">PROJETOS</span>
+                        <span class="lang-en hidden">PROJECTS</span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#certificacoes" class="nav-link group relative px-1 py-2">
+                        <span class="lang-pt">CERTIFICAÇÕES</span>
+                        <span class="lang-en hidden">CERTIFICATIONS</span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contato" class="nav-link group relative px-1 py-2">
+                        <span class="lang-pt">CONTATO</span>
+                        <span class="lang-en hidden">CONTACT</span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-deep transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Botão de idioma -->
+                <button id="languageToggle"
+                    class="flex items-center gap-2 bg-[#1f1f1f] hover:bg-red-deep/20 border border-red-deep/30 rounded-full px-3 py-1.5 transition-all duration-300">
+                    <span id="langFlag" class="text-base">🌐</span>
+                    <span id="langText" class="text-xs font-medium text-gray-300">PT</span>
+                </button>
             </div>
 
             <!-- botão menu mobile -->
-            <button id="menuToggle" class="md:hidden text-white focus:outline-none text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="flex items-center gap-3 md:hidden">
+                <button id="mobileLanguageToggle"
+                    class="flex items-center gap-1 bg-[#1f1f1f] border border-red-deep/30 rounded-full px-3 py-1.5">
+                    <span id="mobileLangFlag" class="text-base">🌐</span>
+                    <span id="mobileLangText" class="text-xs font-medium text-gray-300">PT</span>
+                </button>
+                <button id="menuToggle" class="text-white focus:outline-none text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
 
         <!-- menu mobile -->
         <div id="mobileMenu"
             class="mobile-menu hidden md:hidden flex-col space-y-3 px-6 pb-5 pt-2 text-base border-t border-red-deep/20 font-['Inter']">
-            <a href="#inicio" class="block py-1 hover:text-red-deep transition-colors">INÍCIO</a>
-            <a href="#sobre" class="block py-1 hover:text-red-deep transition-colors">SOBRE</a>
-            <a href="#projetos" class="block py-1 hover:text-red-deep transition-colors">PROJETOS</a>
-            <a href="#certificacoes" class="block py-1 hover:text-red-deep transition-colors">CERTIFICAÇÕES</a>
-            <a href="#contato" class="block py-1 hover:text-red-deep transition-colors">CONTATO</a>
+            <a href="#inicio" class="block py-1 hover:text-red-deep transition-colors">
+                <span class="lang-pt">INÍCIO</span>
+                <span class="lang-en hidden">HOME</span>
+            </a>
+            <a href="#sobre" class="block py-1 hover:text-red-deep transition-colors">
+                <span class="lang-pt">SOBRE</span>
+                <span class="lang-en hidden">ABOUT</span>
+            </a>
+            <a href="#projetos" class="block py-1 hover:text-red-deep transition-colors">
+                <span class="lang-pt">PROJETOS</span>
+                <span class="lang-en hidden">PROJECTS</span>
+            </a>
+            <a href="#certificacoes" class="block py-1 hover:text-red-deep transition-colors">
+                <span class="lang-pt">CERTIFICAÇÕES</span>
+                <span class="lang-en hidden">CERTIFICATIONS</span>
+            </a>
+            <a href="#contato" class="block py-1 hover:text-red-deep transition-colors">
+                <span class="lang-pt">CONTATO</span>
+                <span class="lang-en hidden">CONTACT</span>
+            </a>
         </div>
     </nav>
 

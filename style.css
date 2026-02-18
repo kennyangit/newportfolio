@@ -43,6 +43,14 @@ body {
     object-fit: cover;
 }
 
+nav a img {
+    transition: transform 0.2s ease;
+}
+
+nav a img:hover {
+    transform: scale(1.05);
+}
+
 .date-badge {
     background-color: #2d2d2d;
     color: #fca5a5;
@@ -187,6 +195,24 @@ a:focus {
 .social-icon:focus {
     outline: none;
     ring: 2px solid #7f1d1d;
+}
+
+/* Botão de idioma */
+#languageToggle,
+#mobileLanguageToggle {
+    transition: all 0.3s ease;
+}
+
+#languageToggle:hover,
+#mobileLanguageToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127, 29, 29, 0.3);
+    background-color: #7f1d1d;
+}
+
+#languageToggle:hover span,
+#mobileLanguageToggle:hover span {
+    color: white;
 }
 
 /* Responsividade (Media Query)*/
