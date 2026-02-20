@@ -53,7 +53,7 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 
 ## 🚀 Tecnologias Utilizadas
 
-<div align="center">
+<div>
 
 | Frontend | Estilização | Ferramentas |
 |----------|-------------|-------------|
@@ -74,52 +74,3 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 | **💻 Projetos** | 6 cards com projetos reais e links para o GitHub |
 | **📚 Formação** | Educação e certificações com badges de data e instituição |
 | **📞 Contato** | Formulário funcional e links para redes sociais |
-
----
-
-## 🖥️ Projetos em Destaque
-
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🍵 Grano D'oro</h3>
-      <p>Landing Page de uma cafeteria desenvolvida em HTML, CSS e JavaScript treinando o conceito de Landing Pages</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
-      <a href="https://github.com/kennyangit/landingPage">🔗 Ver código</a>
-    </td>
-    <td width="50%">
-      <h3>🛍️ Neo Store</h3>
-      <p>Exemplo de site de E-commerce construído com HTML, CSS e JavaScript para disciplina da faculdade</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
-      <a href="https://github.com/kennyangit/neo_store">🔗 Ver código</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🐢 Pokedex</h3>
-      <p>Pokédex interativa utilizando a PokéAPI para buscar informações dos Pokémons em tempo real</p>
-      <p><strong>Tecnologias:</strong> HTML, Tailwind CSS, JavaScript, API REST</p>
-      <a href="https://github.com/kennyangit/Pokedex">🔗 Ver código</a>
-    </td>
-    <td width="50%">
-      <h3>📋 GeneratorOS</h3>
-      <p>Sistema desktop em Java Swing para gerenciamento de ordens de serviço</p>
-      <p><strong>Tecnologias:</strong> Java, Swing, Banco de Dados</p>
-      <a href="https://github.com/kennyangit/GeneratorOS">🔗 Ver código</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>📦 Sistema de Produtos</h3>
-      <p>Sistema desktop em Java Swing para gerenciamento de categorias e produtos (CRUD completo)</p>
-      <p><strong>Tecnologias:</strong> Java, Swing, Banco de Dados</p>
-      <a href="https://github.com/kennyangit/sistema-produtos">🔗 Ver código</a>
-    </td>
-    <td width="50%">
-      <h3>💰 Calculadora de Comissões</h3>
-      <p>Sistema em Python para automatizar cálculos de comissões e despesas</p>
-      <p><strong>Tecnologias:</strong> Python, Tkinter</p>
-      <a href="https://github.com/kennyangit/PROJECT355">🔗 Ver código</a>
-    </td>
-  </tr>
-</table>
