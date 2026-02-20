@@ -41,7 +41,7 @@ const translations = {
         downloadCV: "Baixar Currículo (PDF)",
 
         // Projects
-        projectsTitle: "Meus Projetos",
+        projectsTitle: "Principais Projetos",
         repository: "Repositório",
 
         // Projeto 1
@@ -125,7 +125,7 @@ const translations = {
         downloadCV: "Download Resume (PDF)",
 
         // Projects
-        projectsTitle: "My Projects",
+        projectsTitle: "Main Projects",
         repository: "Repository",
 
         // Project 1
