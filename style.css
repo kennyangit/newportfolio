@@ -197,6 +197,34 @@ a:focus {
     ring: 2px solid #7f1d1d;
 }
 
+/* Estilos para validação do formulário */
+.erro-campo {
+    border-color: #dc2626 !important;
+}
+
+.mensagem-erro {
+    color: #dc2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button[type="submit"] {
+    transition: background-color 0.3s ease;
+}
+
 /* From Uiverse.io by wilsondesouza */
 ul {
     list-style: none;

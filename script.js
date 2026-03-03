@@ -419,27 +419,98 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Formulário de contato
-document.getElementById('formContato').addEventListener('submit', function (e) {
+// Formulário de Contato
+document.getElementById('formContato').addEventListener('submit', async function (e) {
     e.preventDefault();
+    
+    console.log('Formulário enviado!'); // Debug
 
-    const nome = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const assunto = this.querySelectorAll('input[type="text"]')[1].value;
-    const mensagem = this.querySelector('textarea').value;
+    const nome = this.querySelector('input[name="nome"]').value;
+    const email = this.querySelector('input[name="email"]').value;
+    const assunto = this.querySelector('input[name="assunto"]').value;
+    const mensagem = this.querySelector('textarea[name="mensagem"]').value;
+
+    console.log('Dados:', { nome, email, assunto, mensagem }); // Debug
 
     // Validação
     if (!nome || !email || !assunto || !mensagem) {
-        alert(currentLang === 'pt' ? 'Por favor, preencha todos os campos!' : 'Please fill in all fields!');
+        alert(currentLang === 'pt' ? 'Preencha todos os campos!' : 'Fill in all fields!');
         return;
     }
 
-    // Simulação de envio
-    alert(currentLang === 'pt' ? 'Mensagem enviada com sucesso! Entrarei em contato em breve.' : 'Message sent successfully! I will get back to you soon.');
-    this.reset();
+    // Feedback Visual
+    const btn = this.querySelector('button[type="submit"]');
+    const textoOriginal = btn.innerHTML;
+    
+    const textos = {
+        pt: {
+            enviando: 'Enviando...',
+            sucesso: 'Enviado com sucesso!',
+            erro: '✗ Erro ao enviar'
+        },
+        en: {
+            enviando: 'Sending...',
+            sucesso: 'Sent successfully!',
+            erro: '✗ Error sending'
+        }
+    };
+    
+    btn.innerHTML = textos[currentLang].enviando;
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+
+    // Envio para o Formspree
+    try {
+        const response = await fetch('https://formspree.io/f/xgolgegy', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                nome: nome,
+                email: email,
+                assunto: assunto,
+                mensagem: mensagem,
+                _replyto: email,
+                _subject: currentLang === 'pt' 
+                    ? `Novo contato do portfólio: ${assunto}` 
+                    : `New portfolio contact: ${assunto}`
+            })
+        });
+
+        console.log('Resposta:', response);
+
+        if (response.ok) {
+            btn.innerHTML = textos[currentLang].sucesso;
+            btn.style.backgroundColor = '#10b981';
+            this.reset();
+            
+            setTimeout(() => {
+                btn.innerHTML = textoOriginal;
+                btn.style.backgroundColor = '#7f1d1d';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 3000);
+        } else {
+            const errorData = await response.json();
+            console.error('Erro do servidor:', errorData);
+            throw new Error(errorData.error || 'Erro no envio');
+        }
+    } catch (error) {
+        console.error('Erro:', error);
+        btn.innerHTML = textos[currentLang].erro;
+        btn.style.backgroundColor = '#dc2626';
+        
+        setTimeout(() => {
+            btn.innerHTML = textoOriginal;
+            btn.style.backgroundColor = '#7f1d1d';
+            btn.disabled = false;
+            btn.style.opacity = '1';
+        }, 3000);
+    }
 });
 
-// Destaque do link ativo no menu
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
