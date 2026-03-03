@@ -1,9 +1,7 @@
 # 🚀 Yan Kenny - Portfólio
 
 <div align="center">
-  <img src="img/profile.png" alt="Yan Kenny" width="150" style="border-radius: 50%; border: 3px solid #7f1d1d;">
-  
-  <h3>👨‍💻 Desenvolvedor de Software</h3>
+  <h3>👨‍💻 Portfólio Pessoal</h3>
   
   <p>
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
@@ -30,7 +28,10 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 ✅ **Navegação fluida** com scroll suave entre as seções<br>
 ✅ **Design responsivo** adaptado para todos os dispositivos<br>
 ✅ **Menu mobile** com animações suaves<br>
-✅ **Formulário de contato** funcional com validação<br>
+✅ **Formulário de contato** funcional com validação em tempo real<br>
+✅ **Integração com Formspree** para recebimento das mensagens por e-mail<br>
+✅ **Botão de tradução** com suporte a português e inglês<br>
+✅ **Mensagens de feedback** traduzidas no formulário (enviando, sucesso, erro)<br>
 ✅ **Download de currículo** em PDF<br>
 ✅ **Cards interativos** para projetos e certificações<br>
 ✅ **Links diretos** para repositórios no GitHub<br>
@@ -55,11 +56,11 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 
 <div>
 
-| Frontend | Estilização | Ferramentas |
-|----------|-------------|-------------|
-| HTML Semântico | Tailwind CSS | Font Awesome |
-| JavaScript | CSS Moderno | Google Fonts |
-| - | Flexbox/Grid | Git |
+| Frontend | Estilização | Ferramentas | Serviços |
+|----------|-------------|-------------|----------|
+| HTML Semântico | Tailwind CSS | Font Awesome | Formspree |
+| JavaScript | CSS Moderno | Google Fonts | - |
+| - | Flexbox/Grid | Git | - |
 
 </div>
 
@@ -73,4 +74,4 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 | **👤 Sobre** | Biografia profissional com botão para download do currículo |
 | **💻 Projetos** | 6 cards com projetos reais e links para o GitHub |
 | **📚 Formação** | Educação e certificações com badges de data e instituição |
-| **📞 Contato** | Formulário funcional e links para redes sociais |
+| **📞 Contato** | Formulário funcional com integração Formspree e links para redes sociais |
