@@ -43,30 +43,35 @@ const translations = {
         // Projects
         projectsTitle: "Meus Projetos",
         repository: "Repositório",
+        siteButton: "Site",
 
         // Projeto 1
-        project1Title: "Grano D´oro",
-        project1Desc: "Landing Page de uma cafeteria desenvolvida em HTML, CSS e JavaScript treinando o conceito de Landing Pages",
+        project1Title: "Adote um Amigo",
+        project1Desc: "Site de adoção de animais desenvolvido com HTML, CSS e JavaScript, com listagem de animais disponíveis para adoção e interface intuitiva para facilitar o processo de adoção responsável.",
 
         // Projeto 2
-        project2Title: "Neo Store",
-        project2Desc: "Exemplo de site de E-commerce construído com HTML, CSS e JavaScript, esse projeto foi feito para a disciplina de Desenvolvimento de Aplicações para Internet.",
+        project2Title: "Grano D´oro",
+        project2Desc: "Landing Page de uma cafeteria desenvolvida em HTML, CSS e JavaScript treinando o conceito de Landing Pages",
 
         // Projeto 3
-        project3Title: "Pokedex",
-        project3Desc: "Uma Pokédex interativa desenvolvida com HTML, Tailwind CSS e JavaScript, utilizando a PokéAPI para buscar informações dos Pokémons.",
+        project3Title: "Neo Store",
+        project3Desc: "Exemplo de site de E-commerce construído com HTML, CSS e JavaScript, esse projeto foi feito para a disciplina de Desenvolvimento de Aplicações para Internet.",
 
         // Projeto 4
-        project4Title: "Sistema de Gerenciamento de Ordens de Serviço",
-        project4Desc: "Este é um sistema desktop desenvolvido em Java utilizando elementos Swing para gerenciamento completo de clientes e ordens de serviço (OS).",
+        project4Title: "Pokedex",
+        project4Desc: "Uma Pokédex interativa desenvolvida com HTML, Tailwind CSS e JavaScript, utilizando a PokéAPI para buscar informações dos Pokémons.",
 
         // Projeto 5
-        project5Title: "Sistema de Produtos",
-        project5Desc: "Um sistema desktop desenvolvido em Java (Swing) para gerenciamento de Categorias e Produtos. Ele permite cadastrar categorias, cadastrar produtos, alterar produtos existentes e consultar produtos filtrando por categoria.",
+        project5Title: "Sistema de Gerenciamento de Ordens de Serviço",
+        project5Desc: "Este é um sistema desktop desenvolvido em Java utilizando elementos Swing para gerenciamento completo de clientes e ordens de serviço (OS).",
 
         // Projeto 6
-        project6Title: "Calculadora de Comissões",
-        project6Desc: "Um sistema desktop desenvolvido em Python para gerenciamento de comissões e despesas. Esse software foi feito para diminuição de esforço em momentos que é necessário utilizar muito a calculadora, tudo vem automatizado.",
+        project6Title: "Sistema de Produtos",
+        project6Desc: "Um sistema desktop desenvolvido em Java (Swing) para gerenciamento de Categorias e Produtos. Ele permite cadastrar categorias, cadastrar produtos, alterar produtos existentes e consultar produtos filtrando por categoria.",
+
+        // Projeto 7
+        project7Title: "Calculadora de Comissões",
+        project7Desc: "Um sistema desktop desenvolvido em Python para gerenciamento de comissões e despesas. Esse software foi feito para diminuição de esforço em momentos que é necessário utilizar muito a calculadora, tudo vem automatizado.",
 
         // Education
         educationTitle: "Educação",
@@ -127,30 +132,35 @@ const translations = {
         // Projects
         projectsTitle: "My Projects",
         repository: "Repository",
+        siteButton: "Site",
 
         // Project 1
-        project1Title: "Grano D´oro",
-        project1Desc: "Landing Page for a coffee shop developed in HTML, CSS and JavaScript practicing the concept of Landing Pages",
+        project1Title: "Adopt a Friend",
+        project1Desc: "Animal adoption website built with HTML, CSS and JavaScript, with a listing of animals available for adoption and an intuitive interface to make the responsible adoption process easier.",
 
         // Project 2
-        project2Title: "Neo Store",
-        project2Desc: "E-commerce website example built with HTML, CSS and JavaScript, this project was made for the Internet Applications Development course.",
+        project2Title: "Grano D´oro",
+        project2Desc: "Landing Page for a coffee shop developed in HTML, CSS and JavaScript practicing the concept of Landing Pages",
 
         // Project 3
-        project3Title: "Pokedex",
-        project3Desc: "An interactive Pokédex developed with HTML, Tailwind CSS and JavaScript, using PokéAPI to fetch Pokémon information.",
+        project3Title: "Neo Store",
+        project3Desc: "E-commerce website example built with HTML, CSS and JavaScript, this project was made for the Internet Applications Development course.",
 
         // Project 4
-        project4Title: "Service Order Management System",
-        project4Desc: "This is a desktop system developed in Java using Swing elements for complete management of clients and service orders.",
+        project4Title: "Pokedex",
+        project4Desc: "An interactive Pokédex developed with HTML, Tailwind CSS and JavaScript, using PokéAPI to fetch Pokémon information.",
 
         // Project 5
-        project5Title: "Product System",
-        project5Desc: "A desktop system developed in Java (Swing) for managing Categories and Products. It allows registering categories, registering products, changing existing products and querying products filtered by category.",
+        project5Title: "Service Order Management System",
+        project5Desc: "This is a desktop system developed in Java using Swing elements for complete management of clients and service orders.",
 
         // Project 6
-        project6Title: "Commission Calculator",
-        project6Desc: "A desktop system developed in Python for managing commissions and expenses. This software was made to reduce effort when it's necessary to use the calculator a lot, everything is automated.",
+        project6Title: "Product System",
+        project6Desc: "A desktop system developed in Java (Swing) for managing Categories and Products. It allows registering categories, registering products, changing existing products and querying products filtered by category.",
+
+        // Project 7
+        project7Title: "Commission Calculator",
+        project7Desc: "A desktop system developed in Python for managing commissions and expenses. This software was made to reduce effort when it's necessary to use the calculator a lot, everything is automated.",
 
         // Education
         educationTitle: "Education",
@@ -271,7 +281,19 @@ function updateContent() {
         project6.querySelector('p.text-gray-400').textContent = t.project6Desc;
     }
 
-    // Repository text
+    // Projeto 7
+    const project7 = document.querySelector('#projetos .grid > div:nth-child(7)');
+    if (project7) {
+        project7.querySelector('h3').textContent = t.project7Title;
+        project7.querySelector('p.text-gray-400').textContent = t.project7Desc;
+    }
+
+    // Botões "Site" dos cards com imagem
+    document.querySelectorAll('#projetos .btn-site').forEach(el => {
+        el.innerHTML = `<i class="fas fa-globe"></i> ${t.siteButton}`;
+    });
+
+    // Repository text (cards sem imagem)
     document.querySelectorAll('#projetos .text-xs.text-gray-500').forEach(el => {
         el.innerHTML = `<i class="fab fa-github"></i> ${t.repository}`;
     });
@@ -422,7 +444,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Formulário de Contato
 document.getElementById('formContato').addEventListener('submit', async function (e) {
     e.preventDefault();
-    
+
     console.log('Formulário enviado!'); // Debug
 
     const nome = this.querySelector('input[name="nome"]').value;
@@ -441,7 +463,7 @@ document.getElementById('formContato').addEventListener('submit', async function
     // Feedback Visual
     const btn = this.querySelector('button[type="submit"]');
     const textoOriginal = btn.innerHTML;
-    
+
     const textos = {
         pt: {
             enviando: 'Enviando...',
@@ -454,7 +476,7 @@ document.getElementById('formContato').addEventListener('submit', async function
             erro: '✗ Error sending'
         }
     };
-    
+
     btn.innerHTML = textos[currentLang].enviando;
     btn.disabled = true;
     btn.style.opacity = '0.7';
@@ -473,8 +495,8 @@ document.getElementById('formContato').addEventListener('submit', async function
                 assunto: assunto,
                 mensagem: mensagem,
                 _replyto: email,
-                _subject: currentLang === 'pt' 
-                    ? `Novo contato do portfólio: ${assunto}` 
+                _subject: currentLang === 'pt'
+                    ? `Novo contato do portfólio: ${assunto}`
                     : `New portfolio contact: ${assunto}`
             })
         });
@@ -485,7 +507,7 @@ document.getElementById('formContato').addEventListener('submit', async function
             btn.innerHTML = textos[currentLang].sucesso;
             btn.style.backgroundColor = '#10b981';
             this.reset();
-            
+
             setTimeout(() => {
                 btn.innerHTML = textoOriginal;
                 btn.style.backgroundColor = '#7f1d1d';
@@ -501,7 +523,7 @@ document.getElementById('formContato').addEventListener('submit', async function
         console.error('Erro:', error);
         btn.innerHTML = textos[currentLang].erro;
         btn.style.backgroundColor = '#dc2626';
-        
+
         setTimeout(() => {
             btn.innerHTML = textoOriginal;
             btn.style.backgroundColor = '#7f1d1d';
