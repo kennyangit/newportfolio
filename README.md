@@ -33,7 +33,7 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 ✅ **Botão de tradução** com suporte a português e inglês<br>
 ✅ **Mensagens de feedback** traduzidas no formulário (enviando, sucesso, erro)<br>
 ✅ **Download de currículo** em PDF<br>
-✅ **Cards interativos** para projetos e certificações<br>
+✅ **Cards interativos** para projetos e certificações (7 projetos)<br>
 ✅ **Links diretos** para repositórios no GitHub<br>
 ✅ **Ícones sociais** com efeitos hover<br>
 ✅ **Animações** de linha no menu de navegação<br>
@@ -72,6 +72,6 @@ Este é meu portfólio pessoal desenvolvido para apresentar meus projetos, habil
 |-------|-----------|
 | **🏠 Início** | Hero section com foto, mensagem de boas-vindas e cargo |
 | **👤 Sobre** | Biografia profissional com botão para download do currículo |
-| **💻 Projetos** | 6 cards com projetos reais e links para o GitHub |
+| **💻 Projetos** | 7 cards com projetos reais e links para o GitHub |
 | **📚 Formação** | Educação e certificações com badges de data e instituição |
 | **📞 Contato** | Formulário funcional com integração Formspree e links para redes sociais |
